@@ -1,0 +1,98 @@
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=UnifrakturMaguntia&display=swap');
+
+#wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#mapArea {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  margin: auto;
+  border-right: 1px solid black;
+  box-sizing: border-box;
+}
+
+#mapArea #mapContainer {
+  height: 100%;
+  width: 100%;
+}
+
+#infoArea {
+  width: 30rem; /* 30 * 16px = 480px */
+  display: flex;
+  flex-direction: column;
+  box-sizing: content-box;
+}
+
+h1 {
+  font-family: 'Neuton', serif;
+  font-size: 1.5rem; /* 24px (1.5 * 16px) */
+}
+h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px; /* 24px (1.5 * 16px) */
+  font-weight: bold;
+}
+h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px; /* 24px (1.5 * 16px) */
+  font-weight: bold;
+}
+a {
+  text-decoration: none;
+}
+
+.marker-cluster {
+  border-radius: 50%;
+  border: 1px solid black;
+  text-align: center;
+  color: white;
+  background-color: #3A8DCD;
+}
+
+
+.leaflet-popup-close-button {
+  display: none;
+}
+
+.custom-popup .leaflet-popup-tip {
+  background-color: #f8f9fa;
+  border-style: none;
+  border-color: black;
+  box-shadow: none;
+}
+
+
+
+.leaflet-popup-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Neuton', serif;
+  text-align: center;
+  font-size: 16px; /* 14px (0.875 * 16px) */
+}
+
+/* Sanftes Ein- und Ausblenden der Marker */
+.leaflet-marker-icon,
+.custom-marker-icon,
+.leaflet-marker-shadow {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Cluster-Icons animieren */
+.custom-cluster-icon {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Marker-Container (für das Hinzufügen/Entfernen) */
+.leaflet-pane.leaflet-marker-pane {
+  transition: opacity 0.3s ease-in-out;
+}

@@ -1,0 +1,203 @@
+.itemList {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-top: 8px;
+  padding-bottom: 112px;
+}
+
+.itemList .header {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  flex-shrink: 0;
+  padding-bottom: 8px;
+}
+
+.itemList .header .headerIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 40px;
+  width: 40px;
+}
+
+.itemList .header .headerText {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 40px;
+  color: var(--color-text-primary);
+  overflow: hidden;
+}
+
+.itemList .header .headerCloseButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  width: 36px;
+  background-color: var(--color-button-default);
+  border-radius: 10px;
+  margin-right: 16px;
+  transition: background-color 0.3s ease;
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.itemList .header .headerCloseButton:hover {
+  background-color: var(--color-button-hover);
+}
+
+.itemList .list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 4px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.item {
+  background-color: var(--color-button-default);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.item .icon {
+  filter: saturate(80%);
+  border-radius: 10px;
+  width: 64px;
+  height: 72px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 24px;
+  text-align: center;
+  background-color: lightblue;
+    cursor: pointer;
+}
+
+.iconBox {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Ermöglicht Umbruch in neue Zeilen */
+  justify-content: center;
+  align-items: center;
+}
+
+.singleIconBox {
+  flex: calc(50%); /* 50% Breite minus gap (falls gap verwendet wird) */
+  /* Alternativ: width: 50%; */
+  height: 50%; /* Beispielhöhe */
+  width: 32px; /* Beispiel für Sichtbarkeit */
+  padding-top: 3px;
+}
+
+.item .description {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-left: 12px;
+  padding-right: 8px;
+}
+
+.item .description .text {
+  cursor: pointer;
+  display: flex;
+  height: 56px;
+  font-size: 16px;
+  box-sizing: border-box;
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  text-align: justify;
+  justify-content: center;
+  align-items: center;
+}
+
+.item .description .infoBox {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.item .description .infoBox .source,
+.item .description .infoBox .lang {
+  height: 16px;
+  box-sizing: border-box;
+  justify-content: center;
+  color: var(--color-text-darker);
+  padding-bottom: 4px;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.item .description .infoBox .date {
+  height: 16px;
+  box-sizing: border-box;
+  justify-content: center;
+  color: var(--color-text-darker);
+  padding-bottom: 4px;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.item .description .infoBox .source {
+  font-weight: normal;
+}
+
+.item .description .infoBox .langIcon {
+  height: 16px;
+  padding-left: 8px;
+  box-sizing: border-box;
+  justify-content: center;
+  padding-bottom: 4px;
+  font-size: 18px;
+  line-height: 0.8;
+}
+
+.item .description .infoBox .spacer {
+  cursor: pointer;
+  flex: 1;
+}
+
+.item a {
+  color: var(--color-text-darker);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.item a:hover {
+  color: var(--color-text-darker);
+  text-decoration: none;
+}
+
+.item a:visited {
+  color: var(--color-text-darker);
+}
+
+.item a:active {
+  color: var(--color-text-darker);
+}
+
+.item:hover {
+  background-color: var(--color-button-hover);
+}
+
+.item:hover .icon {
+  filter: saturate(100%);
+}

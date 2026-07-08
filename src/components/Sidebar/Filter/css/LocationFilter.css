@@ -1,0 +1,43 @@
+.locationFilterWrapper {
+  width: 100%;
+  padding: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.attribute {
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  transition: background-color 0.3s ease;
+  background-color: var(--color-button-default);
+  border-radius: 8px;
+  .icon {
+    width: 16px;
+    height: 16px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0.8;
+    text-align: center;
+  }
+  .text {
+    height: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text-primary);
+  }
+}
+.attribute:hover {
+    background-color: var(--color-button-hover);
+}
+

@@ -1,0 +1,49 @@
+.dateFilterOuterWrapper {
+  padding-left: 8px;
+  padding-right: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.dateFilterWrapper {
+  display: flex;
+  flex-direction: row;
+  background-color: red;
+  padding: 8px;
+  height: 16px;
+  box-sizing: content-box;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  background-color: var(--color-button-default);
+}
+.dateFilterWrapper:hover {
+  background-color: var(--color-button-hover);
+}
+.dateFilterIcon {
+  width: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.dateFilterDescription {
+  padding-right: 8px;
+  flex: 1;
+  color: var(--color-text-primary);
+}
+
+.dateInputField {
+  width: 140px;
+  border: none;
+  border-radius: 6px;
+  background-color:transparent;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  text-align: center;
+  color: var(--color-text-primary);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
